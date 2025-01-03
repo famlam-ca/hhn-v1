@@ -3,9 +3,9 @@ import { hash } from "bcrypt"
 
 const prisma = new PrismaClient()
 
-export const main = async () => {
+export async function main() {
   const password = await hash("testUser1!", 12)
-  await prisma.user.create({
+  const user = await prisma.user.create({
     data: {
       id: "999",
       display_name: "TestUser",
@@ -17,6 +17,8 @@ export const main = async () => {
       password,
     },
   })
+
+  console.log({ user })
 }
 main()
   .then(async () => {

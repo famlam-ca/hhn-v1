@@ -1,5 +1,5 @@
 {
-  "name": "famlam",
+  "name": "v1-app",
   "description": "A home for friends and family, make yourself confortable.",
   "version": "1.0.13",
   "license": "MIT",
@@ -11,19 +11,19 @@
     "start": "next start",
     "lint": "next lint",
     "db:push": "prisma db push",
-    "db:pull": "prisma db pull",
-    "db:gen": "prisma generate",
     "db:studio": "prisma studio",
     "db:seed": "prisma db seed",
+    "postinstall": "prisma generate",
+    "db:reset": "bun db:push --force-reset && bun db:seed",
     "shadcn": "bunx shadcn-ui@latest"
   },
   "prisma": {
-    "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
+    "seed": "tsx prisma/seed.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.6.0",
     "@lucia-auth/adapter-prisma": "^4.0.1",
-    "@prisma/client": "^5.15.0",
+    "@prisma/client": "^6.1.0",
     "@radix-ui/react-alert-dialog": "^1.0.5",
     "@radix-ui/react-avatar": "^1.0.4",
     "@radix-ui/react-checkbox": "^1.0.4",
@@ -89,10 +89,9 @@
     "postcss": "^8",
     "prettier": "^3.3.1",
     "prettier-plugin-tailwindcss": "^0.6.1",
-    "prisma": "^5.15.0",
+    "prisma": "^6.1.0",
     "tailwindcss": "^3.4.4",
-    "ts-node": "^10.9.2",
+    "tsx": "^4.19.2",
     "typescript": "^5"
-  },
-  "packageManager": "yarn@1.22.22+sha1.ac34549e6aa8e7ead463a7407e1c7390f61a6610"
+  }
 }

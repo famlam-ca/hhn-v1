@@ -48,7 +48,7 @@ A home lab hobby web project using [Next.js 14](https://nextjs.org "Next JS") fo
 - [Lucia-auth](https://lucia-auth.com/ "Lucia-auth")
 - [Axios](https://axios-http.com/ "Axios")
 - [Prisma](https://prisma.io "Prisma")
-- [MySQL](https://www.mysql.com/ "MySQL")
+- [PostgreSQL](https://www.postgresql.org/ "PostgreSQL")
 - [Nodemailer](https://www.nodemailer.com/ "Nodemailer")
 - [shadcn/ui](https://ui.shadcn.com/ "shadcn/ui")
 - [Tailwind CSS](https://tailwindcss.com "Tailwind CSS")
